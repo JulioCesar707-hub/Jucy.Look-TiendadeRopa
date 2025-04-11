@@ -1,0 +1,286 @@
+/* ==============================
+   Estilos para la segunda página (Conócenos)
+   ============================== */
+   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@700&display=swap');
+   
+   .menu {
+          font-family: Arial, sans-serif;
+   }
+   
+   body {
+       background-color: #f8f8f8;
+       font-family: Arial, sans-serif;
+       color: #333;
+       margin: 0;
+       padding: 0;
+   }
+   
+   /* Menú secundario */
+   .banner-container2 {
+       width: 100%;
+       height: 300px;
+       background-position: center;
+       background-size: cover;
+       background-image: url(/imgs/banner1.jpg);
+   }
+   
+   /* Menú de navegación */
+nav {
+    background-color: #AE9862;
+    padding: 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    position: relative;
+    text-align: center;
+    
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    background: #AE9862;
+    padding: 0 20px;
+}
+
+/* Estilo para el botón activo */
+.menu li a:hover,
+.menu li a.activo {
+    background-color: #D4A373;
+}
+
+/* Submenú */
+.menu li {
+    position: relative;
+}
+
+.menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    min-width: 100%;
+    display: none;
+    background: #5c5c5c;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    z-index: 1000;
+}
+
+
+.menu li:hover > ul {
+    display: block;
+}
+
+/* Estilos de los elementos del submenú */
+.menu li ul li {
+    width: 100%;
+}
+
+.menu li ul li a {
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    background: #AE9862;
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.menu li ul li a:hover {
+    background-color: #D4A373;
+}
+
+
+   
+/* Sección Conócenos */
+.contenedor {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+       max-width: 800px;
+       margin: 0 auto;
+}
+   
+.contenedor img {
+       margin: 10px 0;
+}
+   
+/* Sección Propósito */
+.proposito {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       max-width: 1000px;
+       margin: 70px auto;
+       gap: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+}
+   
+.texto-proposito {
+       flex: 1;
+       text-align: left;
+   }
+   
+.imagen-proposito {
+       flex: 1;
+   }
+   
+.imagen-proposito img {
+       width: 100%;
+       border-radius: 10px;
+}
+   
+/* Títulos */
+#titulo-c, #titulo-m, #titulo-v, #titulo-p {
+    font-family: "Edu AU VIC WA NT Pre", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2em; 
+    text-transform: uppercase; 
+    text-align: center;
+    color: #bd9736;
+    margin-top: 30px;
+}
+
+   .audio {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px;
+}
+
+.reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #AE9862;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    height: 50px;
+}
+
+
+.video-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+/* el video */
+.video-container video {
+    width: 70%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px; 
+}
+
+@media (max-width: 768px) {
+    .video-container video {
+        width: 90%; 
+    }
+}
+
+/* ============================
+   Estilos responsive simples
+   ============================ */
+   @media (max-width: 768px) {
+        /* Banner ajustado */
+    .banner-container2 {
+        height: 180px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Menú más legible en móvil */
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu li a {
+        font-size: 15px;
+        padding: 12px;
+        border-bottom: 1px solid #9e8441
+    }
+
+    .menu li ul {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+
+    .menu li ul li a {
+        font-size: 14px;
+    }
+
+    /* Apilar sección propósito */
+    .proposito {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 15px;
+    }
+
+    .texto-proposito,
+    .imagen-proposito {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Imágenes centradas */
+    .centrado {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .centrado img {
+        width: 90% !important;
+    }
+
+    /* Ajustes generales */
+    .contenedor {
+        padding: 0 15px;
+    }
+
+    .video-container video {
+        width: 95%;
+    }
+
+    #titulo-c, #titulo-m, #titulo-v, #titulo-p {
+        font-size: 1.6em;
+    }
+
+    .audio {
+        padding: 0 10px;
+    }
+}

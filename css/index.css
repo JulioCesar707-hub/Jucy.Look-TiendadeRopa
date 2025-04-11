@@ -1,0 +1,345 @@
+/* ==============================
+   Estilos para la primera página (Inicio)
+   ============================== */
+
+   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@700&display=swap');
+
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   
+   body {
+       background-color: #f8f8f8;
+       font-family: Arial, sans-serif;
+       color: #333;
+   }
+   
+   /* Banner */
+   .banner-container {
+       width: 100%;
+       height: 300px;
+       background: url(/imgs/bener3.jpg) center/cover;
+   }
+   
+/* Menú de navegación */
+nav {
+    background-color: #5c5c5c;
+    padding: 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    position: relative;
+    text-align: center;
+  
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    background: #5c5c5c;
+    padding: 0 20px;
+}
+
+
+.menu li a:hover,
+.menu li a.activo {
+    background-color: #ff5733;
+}
+
+/* Submenú */
+.menu li {
+    position: relative;
+}
+
+.menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    min-width: 100%;
+    display: none;
+    background: #5c5c5c;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    z-index: 1000;
+}
+
+
+.menu li:hover > ul {
+    display: block;
+}
+
+/* Estilos de los elementos del submenú */
+.menu li ul li {
+    width: 100%;
+}
+
+.menu li ul li a {
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    background: #5c5c5c;
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.menu li ul li a:hover {
+    background-color: #ff5733;
+}
+
+   
+   /* Sección de Cartas */
+   .contenedor-cartas {
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+       gap: 20px;
+       padding: 50px;
+   }
+   
+   .carta {
+       width: 200px;
+       height: 300px;
+       border-radius: 10px;
+       overflow: hidden;
+   }
+   
+   .carta img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       pointer-events: none; 
+   }
+   
+/* Footer */
+footer {
+    background-color: #e0e0e0;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 50px; 
+    text-align: center;
+    border-top: 1px solid #ccc; 
+    padding-top: 10px;
+}
+
+.footer-bottom ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer-bottom ul li {
+    display: inline;
+}
+
+.footer-bottom ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 15px; 
+}
+
+.payment-icon {
+    width: 50px;
+    height: auto;
+}
+
+.social-icons img {
+    width: 40px; 
+    height: auto;
+    margin: 5px;
+    pointer-events: none; 
+}
+
+.libro-reclamaciones {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 90px; 
+}
+
+.libro-reclamaciones img {
+    width: 100%;
+    height: auto;
+    pointer-events: none; 
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+
+/* Estilos video */
+.video-container video {
+    width: 40%; 
+    max-width: 900px; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+
+@media (max-width: 768px) {
+    .video-container video {
+        width: 90%; 
+    }
+}
+
+
+/* ============================
+   Estilos responsive (Móviles/Tablets)
+   ============================ */
+   @media (max-width: 768px) {
+        /* Banner ajustado */
+        .banner-container {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+    /* Menú de navegación en columna */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        width: 100%;
+        border-bottom: 1px solid rgb(209, 209, 209);
+
+    }
+
+    .menu li a {
+        padding: 10px 0;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .menu li ul {
+        position: static;
+        transform: none;
+        background: #AE9862;
+    }
+
+    .menu li ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .menu li ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Sección propósito apilada */
+    .proposito {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .texto-proposito, .imagen-proposito {
+        width: 100%;
+        text-align: center;
+    }
+
+    .texto-proposito p {
+        text-align: justify;
+    }
+
+    /* Imágenes en filas, no en columnas */
+    .centrado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .centrado img {
+        width: 90% !important;
+    }
+
+    /* Espacio en los contenedores */
+    .contenedor {
+        padding: 0 15px;
+    }
+
+    /* Tamaño de títulos */
+    #titulo-c, #titulo-m, #titulo-v, #titulo-p {
+        font-size: 1.6em;
+    }
+}

@@ -1,0 +1,205 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner superior */
+.banner-container {
+    width: 100%;
+    height: 300px;
+    background: url(/imgs/bannerniños.jpg) center/cover no-repeat;
+}
+
+/* Menú de navegación */
+.menu-container {
+    width: 100%;
+    background-color: #bf3100;
+    padding: 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+.menu li {
+    position: relative;
+    text-align: center;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: rgb(255, 255, 253);
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    background: #bf3100;
+    padding: 0 20px;
+}
+
+.menu li a:hover,
+.menu li a.activo {
+    background-color: #ec9f05;
+}
+
+/* Submenú */
+.menu li ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    display: none;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+
+/* Contenedor de productos */
+.contenedor {
+    text-align: center;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.producto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #ec9f05;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #bf3100;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background-color: #bf3100;
+    color: white;
+    padding: 10px;
+    margin-top: 70px;
+}
+
+/* ============================
+   Estilos responsive (Móviles/Tablets)
+   ============================ */
+   @media (max-width: 768px) {
+
+    /* Banner ajustado */
+    .banner-container {
+        height: 180px;
+        background-size: cover;
+        background-position: center;
+    }
+    /* Menú de navegación en columna */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        width: 100%;
+        border-bottom: 1px solid #793e2b;
+    }
+
+    .menu li a {
+        padding: 10px 0;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .menu li ul {
+        position: static;
+        transform: none;
+    }
+
+    .menu ul li {
+        margin: 0;
+        border-bottom: 1px solid #793e2b;
+    }
+
+    .menu li ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Sección propósito apilada */
+    .proposito {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .texto-proposito, .imagen-proposito {
+        width: 100%;
+        text-align: center;
+    }
+
+    .texto-proposito p {
+        text-align: justify;
+    }
+
+    /* Imágenes en filas, no en columnas */
+    .centrado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .centrado img {
+        width: 90% !important;
+    }
+
+    /* Espacio en los contenedores */
+    .contenedor {
+        padding: 0 15px;
+    }
+
+    /* Tamaño de títulos */
+    #titulo-c, #titulo-m, #titulo-v, #titulo-p {
+        font-size: 1.6em;
+    }
+}
