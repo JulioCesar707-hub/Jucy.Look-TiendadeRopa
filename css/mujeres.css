@@ -10,7 +10,7 @@ body {
 .banner-container {
     width: 100%;
     height: 300px;
-    background: url(/imgs/bannermujer.jpg) center/cover no-repeat;
+    background: url(imgs/bannermujer.jpg) center/cover no-repeat;
 }
 
 /* Menú de navegación  */
