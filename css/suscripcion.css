@@ -24,11 +24,11 @@ header {
 }
 
 @keyframes abanner {
-    0% { background-image: url(/imgs/suscrip\ \(1\).jpg); }
-    20% { background-image: url(/imgs/suscrip\ \(2\).jpg); }
-    50% { background-image: url(/imgs/suscrip\ \(3\).jpg); }
-    70% { background-image: url(/imgs/suscrip\ \(4\).jpg); }
-    100% { background-image: url(/imgs/suscrip\ \(5\).jpg); }
+    0% { background-image: url(imgs/suscrip\ \(1\).jpg); }
+    20% { background-image: url(imgs/suscrip\ \(2\).jpg); }
+    50% { background-image: url(imgs/suscrip\ \(3\).jpg); }
+    70% { background-image: url(imgs/suscrip\ \(4\).jpg); }
+    100% { background-image: url(imgs/suscrip\ \(5\).jpg); }
 }
 
 .cuadro {
